@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>Angel ❤️ Lesly</title>
+
+    <link rel="preconnect"
+        href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Great+Vibes&family=Poppins:wght@300;400;500&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+
+    <!-- FONDO DE ESTRELLAS -->
+    <div class="stars"></div>
+
+
+    <!-- =========================
+         PANTALLA DE CONTRASEÑA
+    ========================== -->
+
+    <section id="lockScreen"
+        class="screen lock-screen">
+
+        <div class="lock-card">
+
+            <div class="lock-icon">
+                🔒
+            </div>
+
+            <p class="small-title">
+                NUESTRA HISTORIA
+            </p>
+
+            <h1>
+                Feliz<br>
+                Aniversario
+            </h1>
+
+            <p class="password-text">
+                Introduce nuestra contraseña
+            </p>
+
+
+            <div class="password-box">
+
+                <input type="password"
+                    id="password"
+                    maxlength="20"
+                    placeholder="Contraseña">
+
+            </div>
+
+
+            <button class="main-button"
+                onclick="unlockPage()">
+
+                DESBLOQUEAR ❤️
+
+            </button>
+
+
+            <p id="error"
+                class="error"></p>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         CONTENIDO PRINCIPAL
+    ========================== -->
+
+    <main id="mainContent"
+        class="hidden">
+
+
+
+        <!-- PORTADA -->
+
+        <section class="hero">
+
+            <p class="section-label">
+                NUESTRA HISTORIA
+            </p>
+
+            <h1 class="names">
+
+                Angel
+
+                <span>❤</span>
+
+                Lesly
+
+            </h1>
+
+
+            <div class="hero-heart">
+                ❤️
+            </div>
+
+
+            <p class="start-date">
+
+                Desde el 9 de septiembre de 2023
+
+            </p>
+
+
+            <button class="scroll-button"
+                onclick="scrollToTime()">
+
+                DESCUBRIR NUESTRA HISTORIA ↓
+
+            </button>
+
+        </section>
+
+
+
+        <!-- =========================
+             CONTADOR
+        ========================== -->
+
+        <section id="timeSection"
+            class="content-section">
+
+            <p class="section-label">
+                CADA MOMENTO CUENTA
+            </p>
+
+
+            <h2>
+                Nuestro Tiempo Juntos
+            </h2>
+
+
+            <div class="gold-line"></div>
+
+
+            <div class="counter">
+
+
+                <div class="time-box">
+
+                    <span id="years">
+                        0
+                    </span>
+
+                    <p>AÑOS</p>
+
+                </div>
+
+
+
+                <div class="time-box">
+
+                    <span id="days">
+                        0
+                    </span>
+
+                    <p>DÍAS</p>
+
+                </div>
+
+
+
+                <div class="time-box">
+
+                    <span id="hours">
+                        0
+                    </span>
+
+                    <p>HORAS</p>
+
+                </div>
+
+
+
+                <div class="time-box">
+
+                    <span id="minutes">
+                        0
+                    </span>
+
+                    <p>MINUTOS</p>
+
+                </div>
+
+
+
+                <div class="time-box">
+
+                    <span id="seconds">
+                        0
+                    </span>
+
+                    <p>SEGUNDOS</p>
+
+                </div>
+
+
+            </div>
+
+
+            <p class="time-message">
+
+                Y cada segundo ha sido especial
+                porque lo he compartido contigo ❤️
+
+            </p>
+
+
+        </section>
+
+
+
+        <!-- =========================
+             RECUERDOS
+        ========================== -->
+
+        <section class="content-section memories-section">
+
+
+            <p class="section-label">
+                NUESTRA HISTORIA
+            </p>
+
+
+            <h2>
+                Recuerdos
+            </h2>
+
+
+            <div class="gold-line"></div>
+
+
+            <!-- LIBRO DE FOTOS -->
+
+            <div class="album-container">
+
+
+                <button class="album-arrow left"
+                    onclick="previousPhoto()">
+
+                    ❮
+
+                </button>
+
+
+                <div class="album">
+
+
+                    <div class="album-page left-page">
+
+                        <img id="photoLeft"
+                            src="1.jpeg"
+                            alt="Recuerdo">
+
+                    </div>
+
+
+                    <div class="album-center"></div>
+
+
+                    <div class="album-page right-page">
+
+                        <img id="photoRight"
+                            src="2.jpeg"
+                            alt="Recuerdo">
+
+                    </div>
+
+
+                </div>
+
+
+                <button class="album-arrow right"
+                    onclick="nextPhoto()">
+
+                    ❯
+
+                </button>
+
+
+            </div>
+
+
+            <p id="photoNumber"
+                class="photo-number">
+
+                Recuerdo 1 - 2
+
+            </p>
+
+
+            <div class="dots"
+                id="dots"></div>
+
+
+        </section>
+
+
+
+        <!-- =========================
+             CARTA
+        ========================== -->
+
+        <section class="content-section letter-section">
+
+
+            <p class="section-label">
+                PARA TI
+            </p>
+
+
+            <h2>
+                Una Carta Para Lesly
+            </h2>
+
+
+            <div class="gold-line"></div>
+
+
+            <div class="letter-card">
+
+
+                <div class="letter-heart">
+                    ❤️
+                </div>
+
+
+                <p class="letter-text">
+
+                    Te amo 30 trillones y ese amor cada dia va
+                    a aumentar, me haces la persona más feliz del mundo
+                    y no sabes como me emociona la idea de pasar el resto
+                    de mi vida contigo, eres la persona más especial y por
+                    la que me esfuerzo dia con dia por ser mejor
+
+                </p>
+
+
+                <p class="letter-signature">
+
+                    Con amor,
+
+                </p>
+
+
+                <h3>
+
+                    Angel ❤️
+
+                </h3>
+
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- =========================
+             FINAL
+        ========================== -->
+
+        <section class="final-section">
+
+
+            <div class="final-heart">
+
+                ❤️
+
+            </div>
+
+
+            <p>
+                Gracias por ser parte
+                de mi historia.
+            </p>
+
+
+            <h2>
+
+                Angel ❤️ Lesly
+
+            </h2>
+
+
+            <p class="forever">
+
+                Para siempre.
+
+            </p>
+
+
+        </section>
+
+
+    </main>
+
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

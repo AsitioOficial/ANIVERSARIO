@@ -1,0 +1,1022 @@
+/* ==============================
+   CONFIGURACIÓN GENERAL
+============================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+
+    background:
+        radial-gradient(
+            circle at top,
+            #281019,
+            #09080d 60%
+        );
+
+    color: white;
+
+    font-family: "Poppins", sans-serif;
+
+    overflow-x: hidden;
+
+}
+
+
+/* ==============================
+   FONDO DE ESTRELLAS
+============================== */
+
+.stars {
+
+    position: fixed;
+
+    width: 100%;
+    height: 100%;
+
+    top: 0;
+    left: 0;
+
+    pointer-events: none;
+
+    z-index: -1;
+
+    background-image:
+
+        radial-gradient(
+            white 1px,
+            transparent 1px
+        ),
+
+        radial-gradient(
+            #ffb6d0 1px,
+            transparent 1px
+        );
+
+    background-size:
+        45px 45px,
+        80px 80px;
+
+    opacity: 0.35;
+
+}
+
+
+/* ==============================
+   PANTALLA BLOQUEADA
+============================== */
+
+.screen {
+
+    width: 100%;
+    min-height: 100vh;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    padding: 20px;
+
+}
+
+
+.lock-screen {
+
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    z-index: 100;
+
+    background:
+
+        radial-gradient(
+            circle,
+            rgba(53, 15, 29, 0.95),
+            #08070b
+        );
+
+    transition: 1s;
+
+}
+
+
+.lock-card {
+
+    width: 100%;
+    max-width: 380px;
+
+    text-align: center;
+
+    padding: 45px 30px;
+
+    border:
+
+        1px solid
+        rgba(216, 171, 79, 0.6);
+
+    border-radius: 18px;
+
+    background:
+
+        linear-gradient(
+            145deg,
+            rgba(42, 13, 24, 0.95),
+            rgba(10, 8, 13, 0.95)
+        );
+
+    box-shadow:
+
+        0 0 40px
+        rgba(216, 171, 79, 0.12);
+
+}
+
+
+.lock-icon {
+
+    font-size: 40px;
+
+    margin-bottom: 20px;
+
+}
+
+
+.small-title {
+
+    color: #d6b56d;
+
+    letter-spacing: 3px;
+
+    font-size: 11px;
+
+    margin-bottom: 15px;
+
+}
+
+
+.lock-card h1 {
+
+    font-family: "Cinzel", serif;
+
+    color: #f0d28d;
+
+    font-size: 36px;
+
+    font-weight: 500;
+
+    line-height: 1.4;
+
+}
+
+
+.password-text {
+
+    margin-top: 25px;
+
+    color: #c7b6bb;
+
+    font-size: 13px;
+
+}
+
+
+.password-box {
+
+    margin-top: 20px;
+
+}
+
+
+.password-box input {
+
+    width: 100%;
+
+    padding: 15px;
+
+    border-radius: 8px;
+
+    border:
+
+        1px solid
+        rgba(216, 171, 79, 0.5);
+
+    background: #120d13;
+
+    color: white;
+
+    outline: none;
+
+    text-align: center;
+
+}
+
+
+.main-button {
+
+    margin-top: 20px;
+
+    width: 100%;
+
+    padding: 14px;
+
+    border: none;
+
+    border-radius: 8px;
+
+    background:
+
+        linear-gradient(
+            90deg,
+            #7d193f,
+            #c04d77
+        );
+
+    color: white;
+
+    letter-spacing: 2px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+
+}
+
+
+.main-button:hover {
+
+    transform: scale(1.03);
+
+    box-shadow:
+
+        0 0 25px
+        rgba(255, 93, 153, 0.4);
+
+}
+
+
+.error {
+
+    margin-top: 15px;
+
+    color: #ff6b8e;
+
+    font-size: 13px;
+
+}
+
+
+/* ==============================
+   OCULTAR
+============================== */
+
+.hidden {
+
+    display: none;
+
+}
+
+
+/* ==============================
+   PORTADA
+============================== */
+
+.hero {
+
+    min-height: 100vh;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    padding: 30px;
+
+}
+
+
+.section-label {
+
+    color: #d6b56d;
+
+    letter-spacing: 4px;
+
+    font-size: 11px;
+
+    margin-bottom: 20px;
+
+}
+
+
+.names {
+
+    font-family: "Great Vibes", cursive;
+
+    font-size: 90px;
+
+    font-weight: normal;
+
+    color: #f3d896;
+
+}
+
+
+.names span {
+
+    font-family: Arial;
+
+    color: #c63f6d;
+
+    font-size: 55px;
+
+    margin: 0 15px;
+
+}
+
+
+.hero-heart {
+
+    font-size: 75px;
+
+    margin: 35px 0 25px;
+
+    animation: heartbeat 1.5s infinite;
+
+}
+
+
+.start-date {
+
+    color: #c9b7bd;
+
+    font-size: 14px;
+
+}
+
+
+.scroll-button {
+
+    margin-top: 50px;
+
+    padding: 13px 25px;
+
+    background: transparent;
+
+    border:
+
+        1px solid
+        #d6b56d;
+
+    color: #d6b56d;
+
+    border-radius: 30px;
+
+    font-size: 11px;
+
+    letter-spacing: 2px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+
+}
+
+
+.scroll-button:hover {
+
+    background: #d6b56d;
+
+    color: #111;
+
+}
+
+
+/* ==============================
+   SECCIONES
+============================== */
+
+.content-section {
+
+    width: 90%;
+
+    max-width: 1100px;
+
+    margin: auto;
+
+    padding: 100px 20px;
+
+    text-align: center;
+
+}
+
+
+.content-section h2 {
+
+    font-family: "Cinzel", serif;
+
+    font-weight: 400;
+
+    color: #f0d28d;
+
+    font-size: 38px;
+
+}
+
+
+.gold-line {
+
+    width: 100px;
+
+    height: 1px;
+
+    background: #d6b56d;
+
+    margin: 25px auto 50px;
+
+}
+
+
+/* ==============================
+   CONTADOR
+============================== */
+
+.counter {
+
+    display: flex;
+
+    justify-content: center;
+
+    flex-wrap: wrap;
+
+    gap: 15px;
+
+}
+
+
+.time-box {
+
+    width: 125px;
+
+    min-height: 120px;
+
+    padding: 20px 10px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    border-radius: 8px;
+
+    background:
+
+        linear-gradient(
+            145deg,
+            rgba(51, 19, 28, 0.9),
+            rgba(18, 10, 15, 0.9)
+        );
+
+    border:
+
+        1px solid
+        rgba(216, 171, 79, 0.5);
+
+    box-shadow:
+
+        0 0 20px
+        rgba(0, 0, 0, 0.5);
+
+}
+
+
+.time-box span {
+
+    font-family: "Cinzel", serif;
+
+    font-size: 34px;
+
+    color: #f0d28d;
+
+}
+
+
+.time-box p {
+
+    margin-top: 8px;
+
+    font-size: 10px;
+
+    letter-spacing: 2px;
+
+    color: #c4aeb5;
+
+}
+
+
+.time-message {
+
+    max-width: 600px;
+
+    margin: 50px auto 0;
+
+    color: #c7b8bc;
+
+    line-height: 1.8;
+
+}
+
+
+/* ==============================
+   RECUERDOS
+============================== */
+
+.memories-section {
+
+    min-height: 100vh;
+
+}
+
+
+.album-container {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 20px;
+
+}
+
+
+.album {
+
+    width: 650px;
+
+    max-width: 80vw;
+
+    display: flex;
+
+    position: relative;
+
+    padding: 15px;
+
+    background:
+
+        linear-gradient(
+            90deg,
+            #180e14,
+            #291018,
+            #180e14
+        );
+
+    border-radius: 12px;
+
+    border:
+
+        1px solid
+        rgba(216, 171, 79, 0.6);
+
+    box-shadow:
+
+        0 0 40px
+        rgba(216, 171, 79, 0.15);
+
+}
+
+
+.album-page {
+
+    width: 50%;
+
+    height: 380px;
+
+    padding: 12px;
+
+}
+
+
+.album-page img {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    border-radius: 5px;
+
+}
+
+
+.left-page {
+
+    border-right:
+
+        1px solid
+        rgba(216, 171, 79, 0.3);
+
+}
+
+
+.album-center {
+
+    position: absolute;
+
+    left: 50%;
+
+    top: 0;
+
+    width: 3px;
+
+    height: 100%;
+
+    background:
+
+        linear-gradient(
+            transparent,
+            #d6b56d,
+            transparent
+        );
+
+    transform: translateX(-50%);
+
+}
+
+
+.album-arrow {
+
+    width: 45px;
+
+    height: 45px;
+
+    border-radius: 50%;
+
+    border:
+
+        1px solid
+        #d6b56d;
+
+    background: transparent;
+
+    color: #d6b56d;
+
+    font-size: 25px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+
+}
+
+
+.album-arrow:hover {
+
+    background: #d6b56d;
+
+    color: #111;
+
+}
+
+
+.photo-number {
+
+    margin-top: 25px;
+
+    color: #d6b56d;
+
+    font-size: 13px;
+
+    letter-spacing: 2px;
+
+}
+
+
+.dots {
+
+    margin-top: 20px;
+
+}
+
+
+.dot {
+
+    width: 8px;
+
+    height: 8px;
+
+    display: inline-block;
+
+    margin: 5px;
+
+    border-radius: 50%;
+
+    background: #5b414a;
+
+}
+
+
+.dot.active {
+
+    background: #d6b56d;
+
+    box-shadow:
+
+        0 0 10px
+        #d6b56d;
+
+}
+
+
+/* ==============================
+   CARTA
+============================== */
+
+.letter-section {
+
+    padding-bottom: 150px;
+
+}
+
+
+.letter-card {
+
+    width: 100%;
+
+    max-width: 700px;
+
+    margin: auto;
+
+    min-height: 400px;
+
+    padding: 50px;
+
+    text-align: left;
+
+    border-radius: 12px;
+
+    background:
+
+        linear-gradient(
+            145deg,
+            rgba(51, 16, 27, 0.95),
+            rgba(19, 8, 13, 0.95)
+        );
+
+    border:
+
+        1px solid
+        rgba(216, 171, 79, 0.6);
+
+    box-shadow:
+
+        0 0 40px
+        rgba(216, 171, 79, 0.12);
+
+}
+
+
+.letter-heart {
+
+    text-align: center;
+
+    font-size: 35px;
+
+    margin-bottom: 30px;
+
+}
+
+
+.letter-text {
+
+    color: #ded0d3;
+
+    line-height: 2;
+
+    font-size: 16px;
+
+}
+
+
+.letter-signature {
+
+    margin-top: 50px;
+
+    color: #c7afb7;
+
+}
+
+
+.letter-card h3 {
+
+    font-family: "Great Vibes", cursive;
+
+    color: #f0d28d;
+
+    font-size: 42px;
+
+    font-weight: normal;
+
+    margin-top: 10px;
+
+}
+
+
+/* ==============================
+   FINAL
+============================== */
+
+.final-section {
+
+    min-height: 80vh;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    padding: 40px;
+
+}
+
+
+.final-heart {
+
+    font-size: 80px;
+
+    animation: heartbeat 1.5s infinite;
+
+}
+
+
+.final-section p {
+
+    margin-top: 20px;
+
+    color: #c7b6bc;
+
+}
+
+
+.final-section h2 {
+
+    font-family: "Great Vibes", cursive;
+
+    color: #f0d28d;
+
+    font-size: 70px;
+
+    font-weight: normal;
+
+    margin-top: 20px;
+
+}
+
+
+.forever {
+
+    font-family: "Cinzel", serif;
+
+    letter-spacing: 3px;
+
+    color: #d6b56d !important;
+
+}
+
+
+/* ==============================
+   ANIMACIÓN
+============================== */
+
+@keyframes heartbeat {
+
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.15);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+
+}
+
+
+/* ==============================
+   RESPONSIVE PARA CELULAR
+============================== */
+
+@media (max-width: 700px) {
+
+
+    .names {
+
+        font-size: 65px;
+
+        display: flex;
+
+        flex-direction: column;
+
+        align-items: center;
+
+    }
+
+
+    .names span {
+
+        margin: 10px 0;
+
+    }
+
+
+    .content-section h2 {
+
+        font-size: 27px;
+
+    }
+
+
+    .time-box {
+
+        width: 42%;
+
+        min-height: 100px;
+
+    }
+
+
+    .album-container {
+
+        gap: 5px;
+
+    }
+
+
+    .album-arrow {
+
+        width: 35px;
+
+        height: 35px;
+
+        font-size: 18px;
+
+    }
+
+
+    .album {
+
+        max-width: 75vw;
+
+        padding: 7px;
+
+    }
+
+
+    .album-page {
+
+        height: 270px;
+
+        padding: 5px;
+
+    }
+
+
+    .letter-card {
+
+        padding: 30px 25px;
+
+    }
+
+
+    .final-section h2 {
+
+        font-size: 55px;
+
+    }
+
+}
